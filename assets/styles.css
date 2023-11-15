@@ -1,0 +1,64 @@
+header {
+    background-color: black;
+}
+
+div.title {
+    color: blue;
+    text-align: center;
+}
+
+div.title h1 {
+    padding: 10px
+}
+
+div.recent.history h2 {
+    font-size: 1.2rem;
+}
+
+main.dashboard {
+    background-color: wheat
+}
+
+div.cityList {
+    margin-top: 20px;
+}
+
+div.city {
+    padding: 10px;
+}
+
+div.cityName {
+    background-color: white;
+    color: black;
+}
+
+div.currentWeather h2
+div.currentWeather h3 {
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+span#uv-index {
+    color: white;
+}
+
+div.fiveDay h2 {
+    font-size: 1.2rem;
+}
+
+div.fiveDay p {
+    font-size: .8rem;
+}
+
+div.fiveDay p.card-title {
+    font-weight: bold;
+    color: white;
+}
+
+.card {
+    background-color: darkgray;
+}
+
+.text-muted {
+    color: white;
+}
