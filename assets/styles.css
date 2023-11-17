@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+
 header {
     background-color: black;
 }
@@ -7,13 +14,28 @@ div.title {
     text-align: center;
 }
 
-div.title h1 {
-    padding: 10px
-}
-
-div.recent.history h2 {
-    font-size: 1.2rem;
-}
+.container {
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+  }
+  .weather-input {
+    width: 550px;
+  }
+  .weather-input input {
+    height: 46px;
+    width: 100%;
+    outline: none;
+    font-size: 1.07rem;
+    padding: 0 17px;
+    margin: 10px 0 20px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .weather-input input:focus {
+    padding: 0 16px;
+    border: 2px solid #5372F0;
+  }
 
 main.dashboard {
     background-color: rgb(255, 251, 244)
