@@ -7,10 +7,13 @@ const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
+const form = document.querySelector("form");
+
 
 // const API_KEY = "";
 
-const getCityCoordinates = () => {
+const getCityCoordinates = (e) => {
+    e.preventDefault ();
     const cityName = CityInput.value.trim();
     if(!cityName) return;
     const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&=limit=1&appid=${API_KEY}`;
@@ -24,7 +27,7 @@ const getCityCoordinates = () => {
     });
 }
 
-searchButton.addEventListener("click", getCityCoordinates);
+form.addEventListener("submit", getCityCoordinates);
 
 
 const createWeatherCard = (cityName, weatherItem, index) => {
@@ -53,7 +56,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 
 const getWeatherDetails = (cityName, latitude, longitude) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
-
+}
 
     let pastSearches = [];
 
@@ -65,5 +68,4 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
 
         function savedCities() {
             localStorage.setItem('pastSearches', JSON.stringify(pastSearches));
-        }
-    };
+        };
