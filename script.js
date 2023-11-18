@@ -67,5 +67,5 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
         }
 
         function savedCities() {
-            localStorage.setItem('pastSearches', JSON.stringify(pastSearches));
-        };
+            localStorage.setItem('pastSearches', JSON.stringify(pastSearches));}
+        
